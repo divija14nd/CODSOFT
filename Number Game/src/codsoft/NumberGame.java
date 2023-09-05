@@ -11,7 +11,7 @@ public class NumberGame {
       
 	public static void main(String[] args) {
 
-		Scanner scanner = new Scanner(System.in);
+	Scanner scanner = new Scanner(System.in);
         boolean playAgain = true;
         int totalAttempts = 0; // Initialize total attempts counter
         int totalRounds = 0; // Initialize total rounds counter
@@ -79,7 +79,7 @@ public class NumberGame {
     }
 
 
- 	// Method to check the user's guess and provide feedback
+    // Method to check the user's guess and provide feedback
     public static String check(int userGuess, int randomNumber) {
         if (userGuess == randomNumber) {
             return "Correct!";
