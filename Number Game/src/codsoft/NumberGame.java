@@ -32,7 +32,7 @@ public class NumberGame {
             }
         }
         
-     // Calculate and display the user's score based on the average attempts per round
+        // Calculate and display the user's score based on the average attempts per round
         double avgAttemptsPerRound = (double) totalAttempts / totalRounds;
         System.out.printf("\nGame Over! \nYour average score based on attempts was %.2f.%n", avgAttemptsPerRound);
 
@@ -44,7 +44,7 @@ public class NumberGame {
     // Method to play a single round of the game and return the number of attempts
     public static int play() {
         Random random = new Random();
-        int randomNumber = random.nextInt(100) + 1; // Generate a random number between 1 and 100
+        int randomNumber = random.nextInt(100) + 1; //Generate a random number between 1 and 100
 
         System.out.println("------------------------------------");
         System.out.println("             Number Game            ");
@@ -67,18 +67,19 @@ public class NumberGame {
                 correctGuess = true;
             }
         }
-
         return attempts;
     }
 
-    
+
     // Method to get the user's guess
     public static int guess() {
         System.out.print("\nEnter your guess: "); // Moved the prompt here
         Scanner scanner = new Scanner(System.in);
         return scanner.nextInt();
     }
- // Method to check the user's guess and provide feedback
+
+
+ 	// Method to check the user's guess and provide feedback
     public static String check(int userGuess, int randomNumber) {
         if (userGuess == randomNumber) {
             return "Correct!";
