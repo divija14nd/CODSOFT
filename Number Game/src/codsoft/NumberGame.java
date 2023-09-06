@@ -50,12 +50,14 @@ public class NumberGame {
         System.out.println("             Number Game            ");
         System.out.println("------------------------------------");
         System.out.println("Guess the a number between 1 to 100!");
+        System.out.println("  You get only 10 chances to guess  ");
         System.out.println("             ----------             ");
 
         boolean correctGuess = false;
         int attempts = 0;
+        int maxAttempts = 10; // Initialize maximum attempts the user gets
 
-        while (!correctGuess) {
+        while (!correctGuess && attempts < maxAttempts) {
             int userGuess = guess(); // Call the guess method to get the user's guess
             attempts++; // Increment attempts counter
 
@@ -66,6 +68,9 @@ public class NumberGame {
             if (result.equals("Correct!")) {
                 correctGuess = true;
             }
+        }
+        if(!correctGuess){
+            System.out.println("Sorry, you have reached the attempt limit!");
         }
         return attempts;
     }
