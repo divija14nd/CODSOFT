@@ -70,7 +70,7 @@ public class NumberGame {
             }
         }
         if(!correctGuess){
-            System.out.println("Sorry, you have reached the attempt limit!");
+            System.out.println("\nSorry, you have reached the attempt limit!");
         }
         return attempts;
     }
