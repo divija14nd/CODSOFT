@@ -1,10 +1,9 @@
 /**
- * 
+ * Task 2: Student Grade Calculator
  */
 package codsoft;
 
 import java.util.Scanner;
-import java.text.DecimalFormat;
 
 public class StudentGradeCalculator {
 
@@ -71,14 +70,13 @@ public class StudentGradeCalculator {
     
         // Method to display Results
         public static void displayResults(int totalMarks, double averagePercentage, char grade) {
-            DecimalFormat decimalFormat = new DecimalFormat("0.00"); // Format for two decimal places
-            String formattedPercentage = decimalFormat.format(averagePercentage);
+            double roundedAveragePercentage = Math.round(averagePercentage * 100.0) / 100.0;
 
             System.out.println("\nTotal Marks: " + totalMarks);
-            System.out.println("Average Percentage: " + formattedPercentage + "%");
+            System.out.println("Average Percentage: " + roundedAveragePercentage + "%");
             System.out.println("Grade: " + grade);
-        }
     }
+}
 
 
 
