@@ -20,7 +20,9 @@ public class ATMMachine {
     }
 
     public void displayMenu() {
+    	System.out.println("\n--------------------------");
         System.out.println("Welcome to the ATM Machine");
+        System.out.println("--------------------------");
         System.out.println("1. Check Balance");
         System.out.println("2. Deposit Money");
         System.out.println("3. Withdraw Money");
@@ -32,15 +34,15 @@ public class ATMMachine {
 
         while (true) {
             displayMenu();
-            System.out.print("Please select an option (1/2/3/4): ");
+            System.out.print("\nPlease select an option (1/2/3/4): ");
             String choice = scanner.nextLine();
 
             switch (choice) {
                 case "1":
-                    System.out.println("Your balance is Rs." + userAccount.getBalance());
+                    System.out.println("\nYour balance is Rs." + userAccount.getBalance());
                     break;
                 case "2":
-                    System.out.print("Enter the amount to deposit: Rs.");
+                    System.out.print("\nEnter the amount to deposit: Rs.");
                     double depositAmount = Double.parseDouble(scanner.nextLine());
                     if (userAccount.deposit(depositAmount)) {
                         System.out.println("Rs." + depositAmount + " deposited successfully.");
@@ -49,7 +51,7 @@ public class ATMMachine {
                     }
                     break;
                 case "3":
-                    System.out.print("Enter the amount to withdraw: $");
+                    System.out.print("\nEnter the amount to withdraw: Rs.");
                     double withdrawAmount = Double.parseDouble(scanner.nextLine());
                     if (userAccount.withdraw(withdrawAmount)) {
                         System.out.println("Rs." + withdrawAmount + " withdrawn successfully.");
